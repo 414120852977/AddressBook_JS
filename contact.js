@@ -1,7 +1,7 @@
 class Contact {
  firstName;
  lastName;
-addess;
+ addess;
  city;
  state;
  zip;
@@ -125,19 +125,22 @@ toString() {
         "\nMobile Number : " + this.mobileNumber +
         "\nEmail         : " + this.email;
     }
-    display() {
-        console.log(lastName);
-    }
-
 }
 /* @Description - to create a new address book array and add new contacts  */
     try {        
         var addressBook = new Array();
         console.log("<<<<<Welcome to AddressBook Application>>>>>");
-        addressBook.push(new constructor("ashok","mane","jalna","jalna","Maharashtra",431514,4545454,"ashok.mit@gmail.com")); 
-        addressBook.push(new constructor("joe","bidden","pune","pune","Maharashtra",431514,8788594431,"aaasa@gmail.com")); 
-        addressBook.push(new constructor("Rohit","Sharma","Dadar","Mumbai","Maharashtra",400144,8000000431,"Rohit@Yahoo.com"));             
-        addressBook.forEach((constructor) => console.log(constructor.toString()));
+        addressBook.push(new Contact("ashok","mane","jalna","jalna","Maharashtra",431514,4545454,"ashok.mit@gmail.com")); 
+        addressBook.push(new Contact("joe","bidden","pune","pune","Maharashtra",431514,8788594431,"aaasa@gmail.com")); 
+        addressBook.push(new Contact("Rohit","Sharma","Dadar","Mumbai","Maharashtra",400144,8000000431,"Rohit@Yahoo.com"));   
+        console.log(addressBook);
+        // updating contact details          
+         console.log('contacts before being updated \n');
+        addressBook.forEach((Contact) => console.log(Contact));
+
+        addressBook.filter(Contact => Contact.firstName == 'joe').map(Contact => Contact.firstName = 'mukesh')
+        console.log('contacts after being updated \n');
+        addressBook.forEach((Contact) => console.log(Contact));
         }
         catch (e) {
             console.log('Regex test is fail \n' + e);
@@ -146,5 +149,5 @@ console.log("welcome to Addressbook System in javaScript");
 /** 
 ability to create contact into addressbook
  */
- let contact = new constructor("ashok","mane","401jalna","jalna","maharashtra",431212,8459214148,"ashok@gmail.com");
- console.log(contact.toString());
+ let contact = new Contact("ashok","mane","401jalna","jalna","maharashtra",431212,8459214148,"ashok@gmail.com");
+ console.log(contact);

@@ -193,6 +193,14 @@ toString() {
 
     console.log('Checking duplicate while adding new contact in the address book ');
     addressBook.forEach((contact) => console.log(contact.toString()));
+        /*@Description - view person by city or state */
+
+     let contactCity = "jalna";
+     let contactState = "maharashtra";
+     let contactByCityArray = addressBook.filter(contact => contact.city == contactCity).map(contact => contact);
+     contactByCityArray.forEach(contact => console.log(contact.toString()))
+     let contactByStateArray = addressBook.filter(contact => contact.state == contactState).map(contact => contact);
+     contactByStateArray.forEach(contact => console.log(contact.toString()));
         }
 
         catch (e) {

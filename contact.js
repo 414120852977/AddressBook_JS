@@ -179,7 +179,22 @@ toString() {
 
     console.log('Checking duplicate while adding new contact in the address book ');
     addressBook.forEach((contact) => console.log(contact.toString()));
+       
+
+
+
+    function addContact() {
+        if (countDuplicate == 0) addressBook.push(newContact);
+        else console.log("\nContact not added in the address book. Duplicate Entry found.\n");
+    }
+
+    
+    addContact();
+
+    console.log('Checking duplicate while adding new contact in the address book ');
+    addressBook.forEach((contact) => console.log(contact.toString()));
         }
+
         catch (e) {
             console.log('Regex test is fail \n' + e);
         }

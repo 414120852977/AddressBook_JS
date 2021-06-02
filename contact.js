@@ -141,13 +141,13 @@ toString() {
         addressBook.filter(Contact => Contact.firstName == 'joe').map(Contact => Contact.firstName = 'mukesh')
         console.log('contacts after being updated \n');
         addressBook.forEach((Contact) => console.log(Contact));
+        let index = addressBook.findIndex(contact => Contact.firstName = "ashok");
+        addressBook.slice(index,1);
+        console.log("contact after deletted ");
+        addressBook.forEach((contact) => console.log(contact));
+        
         }
         catch (e) {
             console.log('Regex test is fail \n' + e);
         }
-console.log("welcome to Addressbook System in javaScript");
-/** 
-ability to create contact into addressbook
- */
- let contact = new Contact("ashok","mane","401jalna","jalna","maharashtra",431212,8459214148,"ashok@gmail.com");
- console.log(contact);
+ 
